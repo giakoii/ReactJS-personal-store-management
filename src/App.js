@@ -4,7 +4,6 @@ import { routes } from "./routes/index";
 import DefaultComponent from './components/DefaultComponent/DefaultComponent';
 
 function App() {
-    console.log('Rendering App');
     return (
         <Router>
             <Routes>
