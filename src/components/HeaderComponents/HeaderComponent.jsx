@@ -25,8 +25,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import {ShoppingBagIcon, UserIcon} from "@heroicons/react/16/solid";
 
 const products = [
-    { name: 'Mit', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Yen', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+    { name: 'Mít', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+    { name: 'Yến', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
     ]
 const callsToAction = [
     // { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -58,7 +58,7 @@ const HeaderComponent = () => {
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
                         <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                            Product
+                            Sản Phẩm
                             <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
                         </PopoverButton>
 
@@ -108,7 +108,7 @@ const HeaderComponent = () => {
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                    <a href="http://localhost:3000/Login" className="text-sm font-semibold leading-6 text-gray-900">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
@@ -176,7 +176,7 @@ const HeaderComponent = () => {
                             </div>
                             <div className="py-6">
                                 <a
-                                    href="#"
+                                    href="http://localhost:3000/Login"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 transition-all"
                                 >
                                     Log in
