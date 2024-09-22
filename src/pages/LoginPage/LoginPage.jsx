@@ -18,12 +18,12 @@ const LoginPage = () => {
                                             src="#"
                                             alt="logo"/>
                                         <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
-                                            Vua mit yen Khoa
+                                            Vựa mít - yến Khoa
                                         </h4>
                                     </div>
 
                                     <form>
-                                        <p className="mb-4">Please login to your account</p>
+                                        <p className="mb-4">Xin hãy đăng nhập</p>
                                         {/* Username input */}
                                         <div className="relative mb-4" data-twe-input-wrapper-init>
                                             <input
@@ -34,7 +34,7 @@ const LoginPage = () => {
                                             <label
                                                 htmlFor="exampleFormControlInput1"
                                                 className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
-                                            >Username
+                                            >Tên đăng nhập
                                             </label>
                                         </div>
 
@@ -48,7 +48,7 @@ const LoginPage = () => {
                                             <label
                                                 htmlFor="exampleFormControlInput11"
                                                 className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
-                                            >Password
+                                            >Mật khẩu
                                             </label>
                                         </div>
 
@@ -62,11 +62,11 @@ const LoginPage = () => {
                                                 style={{
                                                     background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
                                                 }}>
-                                                Log in
+                                                Đăng nhập
                                             </button>
 
                                             {/* Forgot password link */}
-                                            <a href="#!">Forgot password?</a>
+                                            <a href="#!">Quên mật khẩu</a>
                                         </div>
 
                                         {/* Login google */}
@@ -88,19 +88,19 @@ const LoginPage = () => {
                                                       d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
                                                 </svg>
                                             </span>
-                                            Continue with Google
+                                            Đăng nhập với Google
                                         </div>
 
 
                                         {/* Register button */}
                                         <div className="flex items-center justify-between pb-6">
-                                            <p className="mb-0 me-2">Don't have an account?</p>
+                                            <p className="mb-0 me-2">Bạn không có tài khoản?</p>
                                             <button
                                                 type="button"
                                                 className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
                                                 data-twe-ripple-init
                                                 data-twe-ripple-color="light">
-                                                Register
+                                                <a href='http://localhost:3000/Register'>Đăng ký</a>
                                             </button>
                                         </div>
                                     </form>
@@ -113,18 +113,18 @@ const LoginPage = () => {
                                 style={{
                                     background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
                                 }}>
-                                <div className="px-4 py-6 text-white md:mx-6 md:p-12">
-                                    <h4 className="mb-6 text-xl font-semibold">
-                                        We are more than just a company
-                                    </h4>
-                                    <p className="text-sm">
-                                        {/*Lorem ipsum dolor sit amet, consectetur adipisicing*/}
-                                        {/*elit, sed do eiusmod tempor incididunt ut labore et*/}
-                                        {/*dolore magna aliqua. Ut enim ad minim veniam, quis*/}
-                                        {/*nostrud exercitation ullamco laboris nisi ut aliquip ex*/}
-                                        {/*ea commodo consequat.*/}
-                                    </p>
-                                </div>
+                                {/*<div className="px-4 py-6 text-white md:mx-6 md:p-12">*/}
+                                {/*    <h4 className="mb-6 text-xl font-semibold">*/}
+                                {/*        We are more than just a company*/}
+                                {/*    </h4>*/}
+                                {/*    <p className="text-sm">*/}
+                                {/*        /!*Lorem ipsum dolor sit amet, consectetur adipisicing*!/*/}
+                                {/*        /!*elit, sed do eiusmod tempor incididunt ut labore et*!/*/}
+                                {/*        /!*dolore magna aliqua. Ut enim ad minim veniam, quis*!/*/}
+                                {/*        /!*nostrud exercitation ullamco laboris nisi ut aliquip ex*!/*/}
+                                {/*        /!*ea commodo consequat.*!/*/}
+                                {/*    </p>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>

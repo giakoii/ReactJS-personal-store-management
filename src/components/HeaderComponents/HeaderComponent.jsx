@@ -1,3 +1,53 @@
+// import React from "react";
+// import {Col, Row} from "antd";
+// import {WrapperContextHeader, WrapperHeader, WrapperHeaderAccount, WrapperHeaderCart, WrapperHeaderText} from "./style";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Input} from 'antd';
+// import {UserOutlined, CaretDownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
+//
+// const {Search} = Input;
+//
+// const HeaderComponent = () => {
+//     return (
+//         <WrapperHeader>
+//             <Col span={6}>
+//                 <WrapperContextHeader>
+//                     Vựa mít - yến Khoa
+//                 </WrapperContextHeader>
+//             </Col>
+//             <Col span={11}>
+//                 <Search
+//                     placeholder="Nhập sản phẩm cần tìm"
+//                     enterButton="Tìm kiếm"
+//                     size="large"
+//                 />
+//             </Col>
+//
+//             <Col span={7} style={ {display: 'flex' , gap: '30px'}}>
+//                 <WrapperHeaderAccount>
+//                     <UserOutlined style={{fontSize: '30px', color: '#fff'}}/>
+//                     <div>
+//                         <WrapperHeaderText>Đăng nhập/Đăng ký</WrapperHeaderText>
+//                         <div>
+//                             <WrapperHeaderText>Tài khoản</WrapperHeaderText>
+//                             <CaretDownOutlined/>
+//                         </div>
+//                     </div>
+//                 </WrapperHeaderAccount>
+//                     <div>
+//                         <WrapperHeaderCart>
+//                             <ShoppingCartOutlined style={{fontSize: '30px', color: '#fff'}}/>
+//                             <WrapperHeaderText>Giỏ hàng</WrapperHeaderText>
+//                         </WrapperHeaderCart>
+//                     </div>
+//             </Col>
+//         </WrapperHeader>
+//     )
+// }
+//
+// export default HeaderComponent;
+
+
 'use client'
 
 import { useState } from 'react'
@@ -23,11 +73,12 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import {ShoppingBagIcon, UserIcon} from "@heroicons/react/16/solid";
+import {Link} from "react-router-dom";
 
 const products = [
     { name: 'Mít', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
     { name: 'Yến', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    ]
+]
 const callsToAction = [
     // { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
     // { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -101,16 +152,16 @@ const HeaderComponent = () => {
                     </Popover>
 
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        About us
+                        Giới thiệu
                     </a>
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        Marketplace
+                        Giá cả
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="http://localhost:3000/Login" className="text-sm font-semibold leading-6 text-gray-900">
-                        Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    <Link to={"/Login"} className="text-sm font-semibold leading-6 text-gray-900">
+                        Đăng nhập <span aria-hidden="true">&rarr;</span>
+                    </Link>
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -159,13 +210,13 @@ const HeaderComponent = () => {
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    About us
+                                    Giới thiệu
                                 </a>
                                 <a
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    Marketplace
+                                    Giá cả
                                 </a>
                                 <a
                                     href="#"
@@ -175,13 +226,12 @@ const HeaderComponent = () => {
                                 </a>
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="http://localhost:3000/Login"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 transition-all"
+                                <Link to={"/Login"}
+                                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 transition-all"
                                 >
-                                    Log in
-                                    <UserIcon width={30} />
-                                </a>
+                                    Đăng nhập <span aria-hidden="true">&rarr;</span>
+                                    <UserIcon width={30}/>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -193,56 +243,3 @@ const HeaderComponent = () => {
 
 
 export default HeaderComponent;
-
-
-// import React from "react";
-// import {Col, Row} from "antd";
-// import {WrapperContextHeader, WrapperHeader, WrapperHeaderAccount, WrapperHeaderCart, WrapperHeaderText} from "./style";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import {Input} from 'antd';
-// import {UserOutlined, CaretDownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
-//
-// const {Search} = Input;
-//
-// const HeaderComponent = () => {
-//     return (
-//         <WrapperHeader>
-//             <Col span={6}>
-//                 <WrapperContextHeader>
-//                     Vựa mít - yến Khoa
-//                 </WrapperContextHeader>
-//             </Col>
-//             <Col span={12}>
-//                 <Search
-//                     placeholder="Enter the product you are looking for"
-//                     enterButton="Search"
-//                     size="large"
-//                 />
-//             </Col>
-//
-//             <Col span={6} style={ {display: 'flex' , gap: '30px'}}>
-//                 <WrapperHeaderAccount>
-//                     <UserOutlined style={{fontSize: '30px', color: '#fff'}}/>
-//                     <div>
-//                         <WrapperHeaderText>Đăng nhập/Đăng ký</WrapperHeaderText>
-//                         <div>
-//                             <WrapperHeaderText>Tài khoản</WrapperHeaderText>
-//                             <CaretDownOutlined/>
-//                         </div>
-//                     </div>
-//                 </WrapperHeaderAccount>
-//                     <div>
-//                         <WrapperHeaderCart>
-//                             <ShoppingCartOutlined style={{fontSize: '30px', color: '#fff'}}/>
-//                             <WrapperHeaderText>Giỏ hàng</WrapperHeaderText>
-//                         </WrapperHeaderCart>
-//                     </div>
-//
-//
-//             </Col>
-//         </WrapperHeader>
-//     )
-// }
-//
-// export default HeaderComponent;
-//
