@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const LoginPage = () => {
     return (<section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
@@ -100,7 +101,7 @@ const LoginPage = () => {
                                                 className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
                                                 data-twe-ripple-init
                                                 data-twe-ripple-color="light">
-                                                <a href='http://localhost:3000/Register'>Đăng ký</a>
+                                                <Link to={"/Register"} >Đăng ký</Link>
                                             </button>
                                         </div>
                                     </form>
@@ -111,20 +112,8 @@ const LoginPage = () => {
                             <div
                                 className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-e-lg lg:rounded-bl-none"
                                 style={{
-                                    background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
+                                    background: "green",
                                 }}>
-                                {/*<div className="px-4 py-6 text-white md:mx-6 md:p-12">*/}
-                                {/*    <h4 className="mb-6 text-xl font-semibold">*/}
-                                {/*        We are more than just a company*/}
-                                {/*    </h4>*/}
-                                {/*    <p className="text-sm">*/}
-                                {/*        /!*Lorem ipsum dolor sit amet, consectetur adipisicing*!/*/}
-                                {/*        /!*elit, sed do eiusmod tempor incididunt ut labore et*!/*/}
-                                {/*        /!*dolore magna aliqua. Ut enim ad minim veniam, quis*!/*/}
-                                {/*        /!*nostrud exercitation ullamco laboris nisi ut aliquip ex*!/*/}
-                                {/*        /!*ea commodo consequat.*!/*/}
-                                {/*    </p>*/}
-                                {/*</div>*/}
                             </div>
                         </div>
                     </div>

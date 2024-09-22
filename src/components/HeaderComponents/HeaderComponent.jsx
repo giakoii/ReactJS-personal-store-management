@@ -1,53 +1,3 @@
-// import React from "react";
-// import {Col, Row} from "antd";
-// import {WrapperContextHeader, WrapperHeader, WrapperHeaderAccount, WrapperHeaderCart, WrapperHeaderText} from "./style";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import {Input} from 'antd';
-// import {UserOutlined, CaretDownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
-//
-// const {Search} = Input;
-//
-// const HeaderComponent = () => {
-//     return (
-//         <WrapperHeader>
-//             <Col span={6}>
-//                 <WrapperContextHeader>
-//                     Vựa mít - yến Khoa
-//                 </WrapperContextHeader>
-//             </Col>
-//             <Col span={11}>
-//                 <Search
-//                     placeholder="Nhập sản phẩm cần tìm"
-//                     enterButton="Tìm kiếm"
-//                     size="large"
-//                 />
-//             </Col>
-//
-//             <Col span={7} style={ {display: 'flex' , gap: '30px'}}>
-//                 <WrapperHeaderAccount>
-//                     <UserOutlined style={{fontSize: '30px', color: '#fff'}}/>
-//                     <div>
-//                         <WrapperHeaderText>Đăng nhập/Đăng ký</WrapperHeaderText>
-//                         <div>
-//                             <WrapperHeaderText>Tài khoản</WrapperHeaderText>
-//                             <CaretDownOutlined/>
-//                         </div>
-//                     </div>
-//                 </WrapperHeaderAccount>
-//                     <div>
-//                         <WrapperHeaderCart>
-//                             <ShoppingCartOutlined style={{fontSize: '30px', color: '#fff'}}/>
-//                             <WrapperHeaderText>Giỏ hàng</WrapperHeaderText>
-//                         </WrapperHeaderCart>
-//                     </div>
-//             </Col>
-//         </WrapperHeader>
-//     )
-// }
-//
-// export default HeaderComponent;
-
-
 'use client'
 
 import { useState } from 'react'
@@ -71,12 +21,15 @@ import {
     SquaresPlusIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import {ShoppingBagIcon, UserIcon} from "@heroicons/react/16/solid";
+import { ChevronDownIcon, PhoneIcon } from '@heroicons/react/20/solid'
+import { UserIcon} from "@heroicons/react/16/solid";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {Link} from "react-router-dom";
+import {faKiwiBird} from "@fortawesome/free-solid-svg-icons";
 
 const products = [
-    { name: 'Mít', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+    { name: 'Mít', description: 'Get a better understanding of your traffic', href: '#', icon:() => <FontAwesomeIcon icon={faKiwiBird} />},
     { name: 'Yến', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
 ]
 const callsToAction = [
@@ -91,10 +44,10 @@ const HeaderComponent = () => {
         <header className="bg-emerald-600">
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <Link to={"/HomePage"} className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img alt="Logo" src="../../img/logotamthoi.jpeg" className="h-8 w-auto" />
-                    </a>
+                        <img alt="Logo" src="../../image/logotamthoi.jpeg" className="h-8 w-auto" />
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -151,12 +104,12 @@ const HeaderComponent = () => {
                         </PopoverPanel>
                     </Popover>
 
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link to={"/AboutPage"} className="text-sm font-semibold leading-6 text-gray-900">
                         Giới thiệu
-                    </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                    </Link>
+                    <Link to={"/PricePage"} className="text-sm font-semibold leading-6 text-gray-900">
                         Giá cả
-                    </a>
+                    </Link>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Link to={"/Login"} className="text-sm font-semibold leading-6 text-gray-900">
@@ -168,14 +121,14 @@ const HeaderComponent = () => {
                 <div className="fixed inset-0 z-10" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-emerald-600 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-gray-400">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <Link to={"/HomePage"} className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img
                                 alt=""
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                                 className="h-8 w-auto"
                             />
-                        </a>
+                        </Link>
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(false)}
@@ -206,24 +159,21 @@ const HeaderComponent = () => {
                                         ))}
                                     </DisclosurePanel>
                                 </Disclosure>
-                                <a
-                                    href="#"
+                                <Link to={"/AboutPage"}
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Giới thiệu
-                                </a>
-                                <a
-                                    href="#"
+                                </Link>
+                                <Link to={"/PricePage"}
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Giá cả
-                                </a>
-                                <a
-                                    href="#"
+                                </Link>
+                                <Link to=""
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Company
-                                </a>
+                                </Link>
                             </div>
                             <div className="py-6">
                                 <Link to={"/Login"}
@@ -243,3 +193,54 @@ const HeaderComponent = () => {
 
 
 export default HeaderComponent;
+
+
+// import React from "react";
+// import {Col, Row} from "antd";
+// import {WrapperContextHeader, WrapperHeader, WrapperHeaderAccount, WrapperHeaderCart, WrapperHeaderText} from "./style";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Input} from 'antd';
+// import {UserOutlined, CaretDownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
+//
+// const {Search} = Input;
+//
+// const HeaderComponent = () => {
+//     return (
+//         <WrapperHeader>
+//             <Col span={6}>
+//                 <WrapperContextHeader>
+//                     Vựa mít - yến Khoa
+//                 </WrapperContextHeader>
+//             </Col>
+//             <Col span={11}>
+//                 <Search
+//                     placeholder="Nhập sản phẩm cần tìm"
+//                     enterButton="Tìm kiếm"
+//                     size="large"
+//                 />
+//             </Col>
+//
+//             <Col span={7} style={ {display: 'flex' , gap: '30px'}}>
+//                 <WrapperHeaderAccount>
+//                     <UserOutlined style={{fontSize: '30px', color: '#fff'}}/>
+//                     <div>
+//                         <WrapperHeaderText>Đăng nhập/Đăng ký</WrapperHeaderText>
+//                         <div>
+//                             <WrapperHeaderText>Tài khoản</WrapperHeaderText>
+//                             <CaretDownOutlined/>
+//                         </div>
+//                     </div>
+//                 </WrapperHeaderAccount>
+//                     <div>
+//                         <WrapperHeaderCart>
+//                             <ShoppingCartOutlined style={{fontSize: '30px', color: '#fff'}}/>
+//                             <WrapperHeaderText>Giỏ hàng</WrapperHeaderText>
+//                         </WrapperHeaderCart>
+//                     </div>
+//             </Col>
+//         </WrapperHeader>
+//     )
+// }
+//
+// export default HeaderComponent;
+
